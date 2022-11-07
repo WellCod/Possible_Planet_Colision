@@ -4,6 +4,7 @@ import "regenerator-runtime/runtime"
 import SentryObject from "./sentry_object"
 import { getSentryObjects } from "./sentry_service"
 
+//Retorna o ID, Nome completo, ano inicio, ano maximo e adiciona no sentryObjects
 async function loadSentryObjects() {
   let sentryObjects = []
   let sentryObjectsJSON = await getSentryObjects()
@@ -14,6 +15,7 @@ async function loadSentryObjects() {
   renderSentryObjects(sentryObjects)
 }
 
+//Cria uma lista ordenada onde concatena os dados id, name, yearMin e yearMax com a string para ser impresso na pagina web
 function renderSentryObjects(sentryObjects) {
   const olElement = document.getElementById("sentry-objects")
   sentryObjects.forEach(sentry => {

@@ -4,12 +4,12 @@ module.exports = {
     entry: {
         index: './src/index.js'
     },
-
+    //criando o pack bundle
     output: {
         filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist')
     },
-
+    
     module: {
         rules: [
             {
@@ -19,7 +19,7 @@ module.exports = {
             }
         ]
     },
-    
+    //auto reload WebPack
     watch: true,
 
     devServer: {

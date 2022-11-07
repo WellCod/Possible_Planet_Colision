@@ -15,7 +15,7 @@ async function loadSentryObjects() {
   renderSentryObjects(sentryObjects)
 }
 
-//Cria uma lista ordenada onde concatena os dados id, name, yearMin e yearMax com a string para ser impresso na pagina web
+//Cria uma lista ordenada onde concatena os dados retornados pelo sentryObjects com a string para ser impresso na pagina web
 function renderSentryObjects(sentryObjects) {
   const olElement = document.getElementById("sentry-objects")
   sentryObjects.forEach(sentry => {
@@ -26,4 +26,5 @@ function renderSentryObjects(sentryObjects) {
   })
 }
 
+//chama a função
 loadSentryObjects()
